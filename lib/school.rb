@@ -23,7 +23,8 @@ class School
   end
 
   def sort
-    @roster.collect do |grade, name|
+    sorted_hash = {}
+    @roster.each do |grade, name|
       @roster[grade].sort do |a , b|
         a <=> b
       end
