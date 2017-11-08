@@ -8,7 +8,6 @@ class School
   def roster
     @roster
   end
-
   def add_student(name, grade)
     if @roster[grade] == nil
       @roster[grade] = []
@@ -27,7 +26,7 @@ class School
     @roster.each do |grade, name|
       @roster[grade].sort do |a, b|
         a <=> b
-        sorted_hash << @roster
+        sorted_hash = {grade => name}
       end
     end
     sorted_hash
