@@ -25,11 +25,12 @@ class School
   def sort
     sorted_hash = {}
     @roster.each do |grade, name|
-      @roster[grade].sort do |a , b|
+      @roster[grade].sort do |a, b|
         a <=> b
+        sorted_hash << @roster
       end
     end
-
+    sorted_hash
   end
 
 end
