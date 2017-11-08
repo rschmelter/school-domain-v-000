@@ -27,7 +27,7 @@ class School
       binding.pry
       @roster[grade].sort do |a, b|
         a <=> b
-        
+
       end
     end
     sorted_hash
