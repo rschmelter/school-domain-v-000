@@ -1,4 +1,4 @@
-
+require "pry"
 class School
 
   def initialize(name)
@@ -24,9 +24,10 @@ class School
   def sort
     sorted_hash = {}
     @roster.each do |grade, name|
+      binding.pry
       @roster[grade].sort do |a, b|
         a <=> b
-        sorted_hash = {grade => name}
+        
       end
     end
     sorted_hash
